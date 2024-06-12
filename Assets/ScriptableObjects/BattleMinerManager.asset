@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   servicesManager: {fileID: 11400000, guid: 515442bfb44d59342ba300dc3aa84f4b, type: 2}
   firstScene: {fileID: 11400000, guid: 30d702dd27aa20f47b16f4d18790402f, type: 2}
+  helloPrefab: {fileID: 5078797566988751521, guid: ce1af23861618c64bb9f87ed9d0a6bda, type: 3}

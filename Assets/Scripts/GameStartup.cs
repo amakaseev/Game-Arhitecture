@@ -6,9 +6,10 @@ namespace BattleMiner {
     [SerializeField] BattleMinerManager gameManager;
 
     async void Start() {
-      await gameManager.InitializeAsync();
       Debug.Log("GameStartup...");
-      await gameManager.StartFirstSceneAsync();
+      await gameManager.InitializeAsync();
+      Debug.Log("StartFirstScene...");
+      //await gameManager.StartFirstSceneAsync();
     }
 
   }
