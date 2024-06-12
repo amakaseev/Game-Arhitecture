@@ -3,7 +3,8 @@ using UnityEngine;
 
 namespace GameArchitecture {
 
-  public abstract class ServicesManager: ScriptableObject {
+  [CreateAssetMenu(fileName = "ServicesManager", menuName = "GameServices/ServicesManager")]
+  public class ServicesManager: ScriptableObject {
     public Service[] services;
 
     public async UniTask InitializeAsync() {
