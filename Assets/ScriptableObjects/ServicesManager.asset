@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: ServicesManager
   m_EditorClassIdentifier: 
   services:
+  - {fileID: 11400000, guid: 0403c59ac9464dd41b512941f230392d, type: 2}
   - {fileID: 11400000, guid: d7e9b91fc06cbb34989c43829373af2e, type: 2}
   - {fileID: 11400000, guid: bd536754b63a2d24c935bcfd98fb323e, type: 2}
   - {fileID: 11400000, guid: 702843bb7303e544cbb91bc6627b60fd, type: 2}
