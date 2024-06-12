@@ -1,7 +1,7 @@
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-namespace GameArhitecture {
+namespace GameArchitecture {
 
   public abstract class Service: ScriptableObject {
       public string serviceName;

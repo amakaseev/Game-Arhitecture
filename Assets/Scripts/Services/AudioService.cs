@@ -1,7 +1,7 @@
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-namespace GameArhitecture {
+namespace GameArchitecture {
 
   [CreateAssetMenu(fileName = "AudioService", menuName = "GameServices/AudioService")]
   public class AudioService: Service {
