@@ -3,17 +3,17 @@ using UnityEngine;
 
 namespace GameArchitecture {
 
-  [CreateAssetMenu(fileName = "AudioService", menuName = "GameServices/AudioService")]
-  public class AudioService: Service {
+  [CreateAssetMenu(fileName = "SoundService", menuName = "GameServices/SoundService")]
+  public class SoundService: Service {
     public override async UniTask InitializeAsync() {
-        Debug.Log("Audio Service Initialized");
-        // Инициализация аудио системы
+        Debug.Log("Sound Service Initialized");
+        // Инициализация системы для работы с звуковыми эффектами
         await UniTask.DelayFrame(1); // Симуляция асинхронной задачи
     }
 
     public override async UniTask ShutdownAsync() {
-        Debug.Log("Audio Service Shutdown");
-        // Очищение или завершение аудио системы
+        Debug.Log("Sound Service Shutdown");
+        // Очищение или завершение системы для работы с звуковыми эффектами
         await UniTask.DelayFrame(1); // Симуляция асинхронной задачи
     }
 
