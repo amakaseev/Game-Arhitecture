@@ -4,14 +4,13 @@ using UnityEngine;
 
 namespace BattleMiner
 {
-  [CreateAssetMenu(fileName = "BattleMinerManager", menuName = "BattleMinerManager")]
-  public class BattleMinerManager: GameManager {
+  [CreateAssetMenu(fileName = "BattleMinerGame", menuName = "BattleMinerGame")]
+  public class BattleMinerGame: Game {
     [SerializeField] SceneConfig firstScene;
-    [SerializeField] ScenesService scenesService;
     [SerializeField] GameObject helloPrefab;
 
     public override async UniTask InitializeAsync() {
-      Debug.Log("BattleMinerManager Initialization Started");
+      Debug.Log("BattleMinerGame Initialization Started");
       var hello = Instantiate(helloPrefab);
       hello.SetActive(false);
 
@@ -20,17 +19,17 @@ namespace BattleMiner
       await UniTask.Delay(2);
       hello.SetActive(true);
       await UniTask.Delay(2);
-      Debug.Log("BattleMinerManager Initialization Completed");
+      Debug.Log("BattleMinerGame Initialization Completed");
     }
 
     public override async UniTask ShutdownAsync() {
-      Debug.Log("BattleMinerManager Shutdown Started");
+      Debug.Log("BattleMinerGame Shutdown Started");
       await base.ShutdownAsync();
-      Debug.Log("BattleMinerManager Shutdown Completed");
+      Debug.Log("BattleMinerGame Shutdown Completed");
     }
 
-    public async UniTask StartFirstSceneAsync() {
-      await scenesService.LoadSceneAsync(firstScene);
+    public override async UniTask Start() {
+      await GetService<SceneService>().LoadSceneAsync(firstScene);
     }
   }
 }

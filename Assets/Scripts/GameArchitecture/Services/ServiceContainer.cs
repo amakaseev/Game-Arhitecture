@@ -4,7 +4,7 @@ using UnityEngine;
 namespace GameArchitecture {
 
   [CreateAssetMenu(fileName = "ServicesManager", menuName = "GameArchitecture/Services/ServicesManager")]
-  public class ServicesManager: ScriptableObject {
+  public class ServiceContainer: ScriptableObject {
     public Service[] services;
 
     public async UniTask InitializeAsync() {

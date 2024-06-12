@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4bf78d3dd9f11614d8ab527929d3858c, type: 3}
-  m_Name: ServicesManager
+  m_Name: ServicesContainer
   m_EditorClassIdentifier: 
   services:
   - {fileID: 11400000, guid: 0403c59ac9464dd41b512941f230392d, type: 2}

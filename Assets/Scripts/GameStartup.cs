@@ -1,15 +1,15 @@
 using UnityEngine;
+using GameArchitecture;
 
 namespace BattleMiner {
 
   public class GameStartup: MonoBehaviour {
-    [SerializeField] BattleMinerManager gameManager;
+    [SerializeField] Game game;
 
     async void Start() {
       Debug.Log("GameStartup...");
-      await gameManager.InitializeAsync();
-      Debug.Log("StartFirstScene...");
-      //await gameManager.StartFirstSceneAsync();
+      await game.InitializeAsync();
+      await game.Start();
     }
 
   }
