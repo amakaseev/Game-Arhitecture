@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace GameArchitecture {
 
-  [CreateAssetMenu(fileName = "ServicesManager", menuName = "GameServices/ServicesManager")]
+  [CreateAssetMenu(fileName = "ServicesManager", menuName = "GameArchitecture/Services/ServicesManager")]
   public class ServicesManager: ScriptableObject {
     public Service[] services;
 

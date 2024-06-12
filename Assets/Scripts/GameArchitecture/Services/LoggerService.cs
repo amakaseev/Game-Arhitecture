@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace GameArchitecture {
 
-  [CreateAssetMenu(fileName = "LoggerService", menuName = "GameServices/LoggerService")]
+  [CreateAssetMenu(fileName = "LoggerService", menuName = "GameArchitecture/Services/LoggerService")]
   public class LoggerService: Service {
     public enum FormatType {
       Text,

@@ -2,14 +2,13 @@ using System;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static GameInput;
 
 namespace BattleMiner {
 
-  [CreateAssetMenu(fileName = "GameInputService", menuName = "GameServices/GameInputService")]
-  public class GameInputService: GameArchitecture.InputService<GameInput>, IBattleActions, ITouchActions {
-    public TouchActions TouchActions => inputActions.Touch;
-    public BattleActions BattleActions => inputActions.Battle;
+  [CreateAssetMenu(fileName = "GameInputService", menuName = "GameArchitecture/Services/GameInputService")]
+  public class GameInputService: GameArchitecture.InputService<GameInput>, GameInput.IBattleActions, GameInput.ITouchActions {
+    public GameInput.TouchActions TouchActions => inputActions.Touch;
+    public GameInput.BattleActions BattleActions => inputActions.Battle;
 
     // Touch Actions
     public Action<bool, Vector2> PrimaryTouchContact;

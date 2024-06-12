@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace GameArchitecture {
 
-  [CreateAssetMenu(fileName = "MusicService", menuName = "GameServices/MusicService")]
+  [CreateAssetMenu(fileName = "MusicService", menuName = "GameArchitecture/Services/MusicService")]
   public class MusicService: Service {
     public override async UniTask InitializeAsync() {
         Debug.Log("Music Service Initialized");
