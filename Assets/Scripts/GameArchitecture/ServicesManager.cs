@@ -18,6 +18,17 @@ namespace GameArchitecture {
         await service.ShutdownAsync();
       }
     }
+
+    public T GetService<T>() where T: Service {
+      if (services == null) return null;
+
+      foreach (var service in services) {
+        if (service is T) {
+          return (T)service;
+        }
+      }
+      return null;
+    }
   }
 
 }

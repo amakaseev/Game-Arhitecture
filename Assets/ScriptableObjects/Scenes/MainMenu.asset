@@ -9,8 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93f14b8e16f794747bd75d0b0fba6351, type: 3}
-  m_Name: BattleMinerManager
+  m_Script: {fileID: 11500000, guid: 2fde28f283c61754da1a1eb544d0eb10, type: 3}
+  m_Name: MainMenu
   m_EditorClassIdentifier: 
-  servicesManager: {fileID: 11400000, guid: 515442bfb44d59342ba300dc3aa84f4b, type: 2}
-  firstScene: {fileID: 11400000, guid: 30d702dd27aa20f47b16f4d18790402f, type: 2}
+  transitionIn:
+    duration: 1
+    color: {r: 0, g: 0, b: 0, a: 1}
+  transitionOut:
+    duration: 1
+    color: {r: 0, g: 0, b: 0, a: 1}
