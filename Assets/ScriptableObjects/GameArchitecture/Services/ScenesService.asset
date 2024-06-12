@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b69a90ca06750546b88f5dc4361ed74, type: 3}
   m_Name: ScenesService
   m_EditorClassIdentifier: 
-  autoSave: 0
+  sceneConfigs:
+  - {fileID: 11400000, guid: 26d4dfa935de94a4b8e61c312474037c, type: 2}

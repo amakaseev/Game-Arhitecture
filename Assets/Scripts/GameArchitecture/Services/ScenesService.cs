@@ -1,5 +1,6 @@
 using Cysharp.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace GameArchitecture {
 
@@ -17,5 +18,15 @@ namespace GameArchitecture {
         await UniTask.DelayFrame(1); // Симуляция асинхронной задачи
     }
 
+    async UniTask LoadSceneAsync(SceneConfig config) {
+      Debug.Log($"<color=#00FFFF>Begin loading scene: [{config.name}]...</color>");
+
+      AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(config.name);
+      await asyncLoad.ToUniTask();
+      
+      await UniTask.DelayFrame(1); // Симуляция асинхронной задачи
+
+      Debug.Log($"<color=#00FFFF>Scene: [{config.name}] loaded.</color>");
+    }
   }
 }
