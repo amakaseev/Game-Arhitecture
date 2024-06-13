@@ -7,18 +7,10 @@ namespace BattleMiner
   [CreateAssetMenu(fileName = "BattleMinerGame", menuName = "BattleMinerGame")]
   public class BattleMinerGame: Game {
     [SerializeField] SceneConfig firstScene;
-    [SerializeField] GameObject helloPrefab;
 
     public override async UniTask InitializeAsync() {
       Debug.Log("BattleMinerGame Initialization Started");
-      var hello = Instantiate(helloPrefab);
-      hello.SetActive(false);
-
       await base.InitializeAsync();
-
-      await UniTask.Delay(2);
-      hello.SetActive(true);
-      await UniTask.Delay(2);
       Debug.Log("BattleMinerGame Initialization Completed");
     }
 
@@ -29,7 +21,11 @@ namespace BattleMiner
     }
 
     public override async UniTask Start() {
+      Debug.Log("asdasdasd");
+      await UniTask.Delay(2000);
       await GetService<SceneService>().LoadSceneAsync(firstScene);
+      await UniTask.Delay(2000);
+      Debug.Log("ASDASDASD");
     }
   }
 }
