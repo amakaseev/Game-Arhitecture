@@ -8,7 +8,7 @@ namespace GameArchitecture {
     protected T inputActions;
 
     public override async UniTask InitializeAsync() {
-        Debug.Log("Input Service Initialized");
+        Debug.Log("<color=#FFFF00>Input</color> Service Initialized");
         inputActions = new T();
         inputActions.Enable();
         await UniTask.DelayFrame(1); // Симуляция асинхронной задачи

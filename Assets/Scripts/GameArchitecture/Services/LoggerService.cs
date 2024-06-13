@@ -21,7 +21,7 @@ namespace GameArchitecture {
     public override async UniTask InitializeAsync() {
         Application.logMessageReceived += HandleLog;
 
-        Debug.Log("Logger Service Initialized");
+        Debug.Log("<color=#FFFF00>Logger</color> Service Initialized");
         await UniTask.DelayFrame(1); // Симуляция асинхронной задачи
     }
 

@@ -9,7 +9,7 @@ namespace GameArchitecture {
     [SerializeField] SceneConfig[] sceneConfigs;
 
     public override async UniTask InitializeAsync() {
-      Debug.Log("Scene Service Initialized");
+      Debug.Log("<color=#FFFF00>Scene</color> Service Initialized");
       await UniTask.DelayFrame(1); // Симуляция асинхронной задачи
     }
 

@@ -9,7 +9,7 @@ namespace BattleMiner {
     [SerializeField] Text text;
 
     async void Start() {
-      Debug.Log("GameStartup...");
+      Debug.Log("<color=#00FF00>GameStartup...</color>");
       await game.InitializeAsync();
       await game.Start();
     }

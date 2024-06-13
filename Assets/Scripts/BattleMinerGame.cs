@@ -9,9 +9,9 @@ namespace BattleMiner
     [SerializeField] SceneConfig firstScene;
 
     public override async UniTask InitializeAsync() {
-      Debug.Log("BattleMinerGame Initialization Started");
+      Debug.Log("<color=#00FF00>BattleMinerGame</color> Initialization Started");
       await base.InitializeAsync();
-      Debug.Log("BattleMinerGame Initialization Completed");
+      Debug.Log("<color=#00FF00>BattleMinerGame</color> Initialization Completed");
     }
 
     public override async UniTask ShutdownAsync() {

@@ -17,6 +17,7 @@ namespace GameArchitecture {
       foreach (var service in services) {
         await service.ShutdownAsync();
       }
+      services = new Service[0];
     }
 
     public T GetService<T>() where T: Service {

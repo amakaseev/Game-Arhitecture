@@ -6,7 +6,7 @@ namespace GameArchitecture {
   [CreateAssetMenu(fileName = "SoundService", menuName = "GameArchitecture/Services/SoundService")]
   public class SoundService: Service {
     public override async UniTask InitializeAsync() {
-        Debug.Log("Sound Service Initialized");
+        Debug.Log("<color=#FFFF00>Sound</color> Service Initialized");
         // Инициализация системы для работы с звуковыми эффектами
         await UniTask.DelayFrame(1); // Симуляция асинхронной задачи
     }
