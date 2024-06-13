@@ -25,8 +25,22 @@ namespace GameArchitecture {
     public async UniTask LoadSceneAsync(SceneConfig config) {
       Debug.Log($"<color=#00FFFF>Begin loading scene: [{config.name}]...</color>");
 
+      // Transition Enter
+      SceneTransition transition = null;
+      if (config.Transition) {
+        transition = Instantiate(config.Transition);
+        await transition.Enter();
+      }
+
+      // Async load scene
       AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(config.name);
       await asyncLoad.ToUniTask();
+
+      // Transition Exit
+      if (transition != null) {
+        await transition.Exit();
+        Destroy(transition.gameObject);
+      }
 
       await UniTask.DelayFrame(1); // Симуляция асинхронной задачи
 

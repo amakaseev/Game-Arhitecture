@@ -21,11 +21,7 @@ namespace BattleMiner
     }
 
     public override async UniTask Start() {
-      Debug.Log("asdasdasd");
-      await UniTask.Delay(2000);
       await GetService<SceneService>().LoadSceneAsync(firstScene);
-      await UniTask.Delay(2000);
-      Debug.Log("ASDASDASD");
     }
   }
 }

@@ -12,9 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fde28f283c61754da1a1eb544d0eb10, type: 3}
   m_Name: GameStartup
   m_EditorClassIdentifier: 
-  transitionIn:
-    duration: 1
-    color: {r: 0, g: 0, b: 0, a: 1}
-  transitionOut:
-    duration: 1
-    color: {r: 0, g: 0, b: 0, a: 1}
+  transition: {fileID: 3698658144222770111, guid: 05230b6f119341d4e9ecb0895c9d37b2, type: 3}
